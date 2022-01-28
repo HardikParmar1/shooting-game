@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shooting-game/static/css/main.14cbed4f.css",
+    "main.js": "/shooting-game/static/js/main.b639b896.js",
+    "index.html": "/shooting-game/index.html",
+    "main.14cbed4f.css.map": "/shooting-game/static/css/main.14cbed4f.css.map",
+    "main.b639b896.js.map": "/shooting-game/static/js/main.b639b896.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14cbed4f.css",
+    "static/js/main.b639b896.js"
+  ]
+}
