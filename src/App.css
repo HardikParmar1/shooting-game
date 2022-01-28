@@ -1,38 +1,156 @@
-.App {
+body{
+  background-color: #009DAE;
+  font-family: 'Nunito', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+}
+.game{
+  color:#FFE652;
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+  font-size: 5em;
+  color:#C2FFF9;
+  text-align:center;
+  margin-bottom: 40px;
+}
+h2{
+  text-align: center;
+  font-size: 5rem;
+}
+p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.player{
+  width: 50%;
 }
+.p1-health-bar{
+  width:100%;
+  height: 30px;
+  background:#4C3F91;
+  border: 2px solid #212121;
+  animation: health 1s;
+  color: #71DFE7;
+  margin:30px;
+}
+.p2-health-bar{
+  width:100%;
+  height: 30px;
+  background:#FF5677;
+  animation: health 1s;
+  border: 2px solid #212121;
+  color: #71DFE7;
+  margin:30px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+@keyframes health{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.health{
+  width: 700px;
+}
+span{
+  color:#e8e8e8;
+}
+.buttonArea{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.start-btn{
+ padding: 15px;
+ width: 150px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  margin: 50px;
+ overflow: hidden;
+}
+.start-btn:hover{
+  outline: 3px solid #212121;
+}
+.reset-btn:hover{
+  outline: 3px solid #e8e8e8;
+}
+.reset-btn{
+ padding: 15px;
+ width: 150px;
+ border: none;
+ border-radius: 15px;
+ color: #e8e8e8;
+ background: #212121;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  margin: 50px;
+ overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* -------------------------media queries------------------------------------ */
+@media (max-width:1440px) {
+  .health{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width:1024px) {
+  .health{
+    width: 500px;
+  }
+
+}
+@media (max-width:768px) {
+  .health{
+    width: 800px;
+  }
+  .game{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+@media (max-width:425px) {
+  .health{
+    width: 350px;
+  }
+  h1{
+    font-size: 3rem;
+    margin-top: 70px;
+  }
+  p{
+    font-size: 1.3rem;
+  }
+  h2{
+    font-size: 2.5rem;
+  }
+}
+@media (max-width:375px) {
+  .health{
+    width: 300px;
   }
 }
