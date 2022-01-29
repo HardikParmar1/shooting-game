@@ -15,7 +15,25 @@ body{
   display: flex;
   flex-direction: row;
 }
+.sound{
+  color: #e8e8e8;
+  position: absolute;
+  top:10px;
+  right: 20px;
+  cursor: pointer;
+}
+.about{
+  position: absolute;
+  top:10px;
+  right: 75px;
+  cursor: pointer;
+}
 
+.about-text{
+  font-size: 1rem;
+  text-align: left;
+  list-style: "-";
+}
 h1{
   font-size: 5em;
   color:#C2FFF9;
@@ -26,10 +44,16 @@ h2{
   text-align: center;
   font-size: 5rem;
 }
-p{
+p,
+.about-title{
   font-family: 'Inter', sans-serif;
   font-size: 1.5em;
   text-align: center;
+}
+.about-title{
+  list-style: none;
+  margin: 10px 0;
+  border-bottom: 1px solid #D3DEDC;
 }
 .player{
   width: 50%;
@@ -64,6 +88,7 @@ p{
 .health{
   width: 700px;
 }
+
 span{
   color:#e8e8e8;
 }
@@ -71,7 +96,6 @@ span{
   display: flex;
   justify-content: center;
 }
-
 .start-btn{
  padding: 15px;
  width: 150px;
@@ -110,33 +134,64 @@ span{
 }
 
 
+
+
 /* -------------------------media queries------------------------------------ */
 @media (max-width:1440px) {
   .health{
-    width: 700px;
+    width: 650px;
     display: flex;
     flex-direction: column;
   }
+  .p1-health-bar{
+    margin:30px 10px;
+  }
+  .p2-health-bar{
+    margin: 30px 10px;
+  }
+}
+@media (max-width:1280px) {
+  .health{
+    width: 600px;
+  }
+
 }
 @media (max-width:1024px) {
   .health{
     width: 500px;
   }
+  .p1-health-bar{
+    margin:30px 5px;
+  }
+  .p2-health-bar{
+    margin: 30px 5px;
+  }
 
 }
 @media (max-width:768px) {
   .health{
-    width: 800px;
+    width: 650px;
   }
   .game{
     flex-direction: column;
     justify-content: center;
   }
-
+  .p1-health-bar{
+    margin:30px ;
+  }
+  .p2-health-bar{
+    margin: 30px;
+  }
+  .about{
+    position: absolute;
+    top:10px;
+    left:20px;
+  }
 }
+
 @media (max-width:425px) {
   .health{
-    width: 350px;
+    width: 365px;
   }
   h1{
     font-size: 3rem;
@@ -148,9 +203,26 @@ span{
   h2{
     font-size: 2.5rem;
   }
+  .p1-health-bar{
+    margin:30px 20px;
+  }
+  .p2-health-bar{
+    margin: 30px 20px;
+  }
+}
+@media (max-width:400px) {
+  .health{
+    width: 330px;
+  }
 }
 @media (max-width:375px) {
   .health{
-    width: 300px;
+    width: 325px;
+  }
+  .p1-health-bar{
+    margin: 30px 10px;
+  }
+  .p2-health-bar{
+    margin: 30px 10px;
   }
 }
